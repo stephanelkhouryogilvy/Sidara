@@ -482,6 +482,14 @@
             }
         }
     }
+    #error-section{
+        border-bottom: 2px solid #ffffff;
+        h1{
+            font-size: 6rem!important;
+            margin-top: 0;
+        }
+       
+    }
 }
 
 @media (min-width: 1200px) and (max-width: 1339px) {

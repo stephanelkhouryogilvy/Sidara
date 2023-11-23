@@ -16,7 +16,9 @@
     .fill-color-change path {
         fill: #DEDEDE;
     }
-
+    .stroke-color-change path {
+        stroke: #DEDEDE;
+    }
     .slider-text-container {
         background-color: #262626;
     }

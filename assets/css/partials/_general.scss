@@ -311,7 +311,12 @@ section#about-section-3 .slider-swiper .swiper-scrollbar-drag {
 
 #about-section-3 {
     background-color: var(--dark-grey);
-
+h1,p{
+    color: #ffffff;
+}
+.display-1{
+    margin-bottom: 2.5rem;
+}
     .slider {
         margin-top: 0;
 
@@ -408,15 +413,20 @@ section#about-section-3 .slider-swiper .swiper-scrollbar-drag {
 }
 
 .btn-primary {
-    @extend .lime-bg, .fs-14;
+    background-color: var(--lime)!important;
+    font-size: 0.875rem!important;
     border: 0;
     border-radius: 2rem;
     padding: 0.825rem 1.5rem;
     color: #1D1D1D !important;
+    appearance: auto;
+    transition: opacity 1s;
+    box-shadow: none;
 
     &:hover,
     &:focus,
     &:active {
+        background-color: var(--lime)!important;
         color: #1D1D1D !important;
         opacity: 0.8;
         transition: opacity 1s;
@@ -517,7 +527,15 @@ a.light-grey-text:hover svg path {
 
 .first-fold {
     height: 100vh;
-
+    .overlay{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: #000;
+        background: linear-gradient(266deg, rgba(0,0,0,0.1811318277310925) 0%, rgba(0,0,0,0.7693671218487395) 100%);
+        top: 0;
+        left: 0;
+    }
     .swiper {
         width: 100%;
         height: 100%;
@@ -607,7 +625,6 @@ a.light-grey-text:hover svg path {
         .btn-primary {
             margin-left: 3.5rem;
             margin-top: 1rem;
-            display: inline;
         }
     }
 
@@ -763,7 +780,8 @@ section {
 
     .collaborative-section {
         img {
-            width: 164px
+           /* width: 164px*/
+           height: 30px;
         }
 
         .btn-primary {
@@ -835,7 +853,7 @@ section {
     }
 
     .mt-7 {
-        margin-top: 40vh
+        margin-top: 50vh
     }
 }
 
@@ -1037,6 +1055,12 @@ section {
                 box-shadow: none;
             }
         }
+        .user-dashboard{
+            margin-top:2.5rem;
+            .user-profile{
+                margin-right: 1rem;
+            }
+        }
     }
 
     &.right {
@@ -1191,7 +1215,7 @@ main {
         width: 100%;
         height: 100%;
         background: rgb(0, 0, 0);
-        background: linear-gradient(266deg, rgba(0, 0, 0, 0.1811318277310925) 0%, rgba(0, 0, 0, 0.7413559173669468) 39%);
+       background: linear-gradient(266deg, rgba(0,0,0,0.1811318277310925) 0%, rgba(0,0,0,0.7693671218487395) 100%);
         top: 0;
         left: 0;
     }
@@ -1282,15 +1306,50 @@ footer {
         }
     }
 }
-
+#article-section-3{
+   
+    h6{
+        color: var(--olive);
+    }
+    h3,p{
+        color: var(--grey1);
+    }
+   
+}
+section#article-section-3 {
+    .swiper-scrollbar{
+        background-color:#F4F4EE
+    }
+    .swiper-scrollbar-drag{
+        background-color: var(--dark-greyy);
+    }
+}
 .breadcrumb-item+.breadcrumb-item:before {
     display: none;
+}
+.background.right-left {
+    height: 100%;
+    min-height: 44vh;
+    position: relative;
+margin-top: 1.5rem;
+    img {
+        position: absolute;
+    }
+}
+#project-section-1{
+    padding-bottom: 0!important;
+    
+    .background.full-height{
+        height: 80vh;
+        margin-top: 2.5rem;
+    }
 }
 
 #about-section-1,
 #collaborative-section-1,
 #leadership-section-1,
-#careers-section-1 {
+#careers-section-1
+ {
     padding-top: 2.5rem;
     padding-bottom: 2.5rem;
 
@@ -1343,7 +1402,6 @@ footer {
 }
 
 section#about-section-5 {
-
     h3,
     p {
         color: var(--grey1);
@@ -1351,7 +1409,7 @@ section#about-section-5 {
 
     .slider {
         .swiper-slide {
-            margin: 0;
+            margin-right: 0!important;
 
             &:first-of-type {
                 .history-line {
@@ -1416,7 +1474,7 @@ section#about-section-5 {
     }
 }
 
-#collaborative-section-1 {
+#collaborative-section-1,#news-section-1 {
     .background {
         height: 70vh;
 
@@ -1439,12 +1497,6 @@ section#about-section-5 {
         padding-left: 0.875rem;
     }
 
-    hr {
-        height: 1px;
-        width: 22px;
-        opacity: 0.5;
-        background-color: var(--grey1);
-    }
 
     .card {
         background-color: var(--cream4);
@@ -1452,11 +1504,44 @@ section#about-section-5 {
         border: 1px solid #CFD3BA;
     }
 
-    .user-dashboard {
-        margin-bottom: 1.25rem;
+ 
+    .col-lg-7{
+        .background{
+            height: 68vh;
+        }
+        .card{
+            height: 100%;
+        }
     }
 }
+.slider-text-container{
+    .tag{
+        background-color: var(--lime);
+        width: 100px;
+        .display-3{
+            color: var(--dark-grey);
+        }
+        margin-bottom: 1.5rem;
+    }
+}
+.user-dashboard {
+    margin-bottom: 1.25rem;
+    .display-4 {
+        @extend .font-m, .fs-12;
+        opacity: 0.5;
+        color: var(--grey1);
+        padding: 0;
+        padding-right: 0.875rem;
+        padding-left: 0.875rem;
+    }
+    hr {
+        height: 1px;
+        width: 22px;
+        opacity: 0.5;
+        background-color: var(--grey1);
+    }
 
+}
 .accordion {
     &.brands {
         .accordion-body {
@@ -1498,6 +1583,9 @@ section#about-section-5 {
         .logo-link {
             height: 28px;
             display: block;
+            img{
+                height: 28px;
+            }
 
         }
 
@@ -1577,7 +1665,31 @@ section#about-section-5 {
         height: 100vh;
     }
 }
+#project-section-2{
+    .display-1 {
+        padding-bottom: 5.75rem;
+    }
 
+    .display-3 {
+        padding-top: 1.5rem;
+    }
+
+    .background {
+        height: 100%;
+    }
+
+    .message-leader {
+
+        p,
+        .display-3 {
+            @extend .font-m;
+        }
+
+        .display-1 {
+            @extend .font-r
+        }
+    }
+}
 #leadership-section-3,
 #careers-section-2 {
     background-color: #303030;
@@ -1804,7 +1916,7 @@ section#careers-section-2 .slider-swiper-3 .swiper-scrollbar-drag {
     z-index: 99000;
 }
 
-#careers-section-4,#aviation-section-1 {
+#careers-section-4,#aviation-section-1,#project-section-1,#article-section-1 {
     h4 {
         @extend .font-book;
         margin-bottom: 1.5rem;
@@ -1946,22 +2058,31 @@ section#careers-section-2 .slider-swiper-3 .swiper-scrollbar-drag {
     }
 }
 
-#careers-section-4 .mySwiper .swiper-slide img , #aviation-section-1 .mySwiper .swiper-slide img {
+#careers-section-4 .mySwiper .swiper-slide img , #aviation-section-1 .mySwiper .swiper-slide img, #project-section-1 .mySwiper .swiper-slide img, #article-section-1 .mySwiper .swiper-slide img{
     object-fit: cover;
 }
 
-#careers-section-4 .mySwiper2 .swiper-slide img, #aviation-section-1 .mySwiper2 .swiper-slide img{
+#careers-section-4 .mySwiper2 .swiper-slide img, #aviation-section-1 .mySwiper2 .swiper-slide img, #project-section-1 .mySwiper2 .swiper-slide img, #article-section-1 .mySwiper2 .swiper-slide img{
     object-fit: contain;
 }
 
-section#careers-section-4 .swiper-scrollbar, section#aviation-section-1 .swiper-scrollbar{
+section#careers-section-4 .swiper-scrollbar, section#aviation-section-1 .swiper-scrollbar, section#project-section-1 .swiper-scrollbar, section#article-section-1 .swiper-scrollbar{
     background: #45494F;
 }
 
-section#careers-section-4 .swiper-scrollbar-drag, section#aviation-section-1 .swiper-scrollbar-drag{
+section#careers-section-4 .swiper-scrollbar-drag, section#aviation-section-1 .swiper-scrollbar-drag, section#project-section-1 .swiper-scrollbar-drag, section#article-section-1 .swiper-scrollbar-drag{
     background: #D6D6D6;
 }
-
+#article-section-1{
+    .mission-vision{
+        h1{
+            margin-top: 1.5rem;
+        }
+    }
+    .video-container{
+        margin-bottom: 6.25rem
+    }
+}
 #careers-section-5 {
     a {
         @extend .font-m;
@@ -1981,20 +2102,42 @@ section#careers-section-4 .swiper-scrollbar-drag, section#aviation-section-1 .sw
 
     }
 
-    .tag {
-        background-color: var(--dark-greyy);
-        width: 80px;
-        box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15), 0px 1px 2px 0px rgba(0, 0, 0, 0.30);
-        border-radius: 4px;
-        padding: 6px 16px;
+  
+}
+.tag {
+    background-color: var(--dark-greyy);
+    width: 80px;
+    box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15), 0px 1px 2px 0px rgba(0, 0, 0, 0.30);
+    border-radius: 4px;
+    padding: 6px 16px;
 
-        .display-3 {
-            @extend .fs-14, .font-m;
-            color: var(--white);
-            text-align: center;
+    .display-3 {
+        @extend .fs-14, .font-m;
+        color: var(--white);
+        text-align: center;
+    }
+}
+#news-section-1{
+    .tag{
+        position: absolute;
+        top: 1.5rem;
+        right: 1.5rem;
+        width: auto;
+    }
+}
+#news-section-3{
+    .btn{
+        @extend .font-r;
+        background-color: var(--dark-grey);
+        border-radius: 32px;
+        color: #ffffff;
+        text-align: center;
+        padding: 12px;
+        width: 100%;
+        &:hover{
+            opacity: 0.8;
+            transition: opacity 1s;
         }
-
-
     }
 }
 #sectors-section-1,#aviation-section-1{
@@ -2070,4 +2213,122 @@ h1{
         }
     }
     margin-bottom: 2.5rem;
+}
+
+#project-section-1{
+    .display-3{
+        &.detail{
+            @extend .font-m;
+            padding-bottom: 1.5rem;
+        }
+    }
+    .display-1{
+        padding-top: 2.5rem;
+    }
+    .two-col-text{
+        padding-top: 2.5rem;
+    }
+}
+#article-section-1{
+    h1{
+        margin-top: 0;
+        margin-bottom: 1.5rem;
+    }
+}
+#terms-section-1{
+    h1{
+        margin-top: 0;
+    }
+    h5{
+    margin-bottom: 2rem;
+    }
+    p{
+        margin-bottom: 1.5rem;
+    }
+    .terms-section{
+        margin-bottom: 4.25rem;
+        &:last-of-type{
+            margin-bottom: 0;
+        }
+    }
+}
+#error-section{
+    height: 70vh;
+    background-color: #303030;
+    h1{
+        color: #ffffff;
+        font-size: 11rem!important;
+      
+    }
+    h2{
+        font-size: 2rem!important;
+        margin-bottom: 2rem;
+        color: #ffffff;
+    }
+    p{
+        color: #ffffff;
+        margin-bottom: 1.5rem;
+    }
+}
+.word-container{
+    .social-link{
+        background-color: #DEDEDE;
+        border-radius: 12px;
+        box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.30), 0px 4px 8px 3px rgba(0, 0, 0, 0.15);
+        width: 40px;
+        height: 40px;
+        margin-top: 1rem;
+        &:first-of-type{
+            margin-right: 1rem;
+        }
+        &:hover{
+            opacity: 0.8;
+            transition: opacity 1s;
+        }
+    }
+}
+.contact-line{
+    margin-top: 1rem;
+    &:first-of-type{
+        margin-top: 2rem;
+    }
+    .social-link{
+        background-color: var(--dark-grey);
+        border-radius: 4px;
+        width: 48px;
+        height: 48px;
+        flex: 0 0 48px;
+        margin-right: 1rem;
+    }
+}
+.display-3{
+    &.bold{
+        @extend .font-m
+    }
+}
+.grey-link{
+    color: var(--grey1);
+    &:hover{
+        opacity: 0.7;
+        transition: opacity 1s;
+        color: var(--grey1);
+    }
+}
+#contact-section{
+    background-color: var(--cream4);
+    h2{
+        @extend .font-book;
+        color: var(--dark-greyy);
+        font-size: 3rem;
+    }
+    hr{
+        width: 30rem;
+        margin-top: 1.5rem;
+    }
+    a{
+        &:hover{
+            opacity: 0.7;
+            transition: opacity 1s
+        }
+    }
 }
